@@ -1,0 +1,50 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mix */
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.page_wrapper {
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(0,150,136,1) 15%, rgba(219,219,210,1) 15%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  min-width: 950px;
+  width: 85%;
+  height: 95%;
+}
+
+/* colonna sinistra */
+.col_left {
+  float: left;
+  width: 35%;
+  height: 100%;
+}
+
+
+
+
+/* fine colonna sinistra */
+/* colonna destra */
+.col_right {
+  float: left;
+  width: 65%;
+  height: 100%;
+}
+/* fine colonna destra */
