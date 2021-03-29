@@ -47,8 +47,7 @@ h3 {
   height: 100%;
 }
 
-/* header sinistra */
-header#header_left {
+header {
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -56,17 +55,18 @@ header#header_left {
   padding: 0 10px;
 }
 
+/* header sinistra */
 .utente {
   display: flex;
   align-items: center;
 }
 
-#header_left a {
+header a {
   color: #B1B1B1;
   font-size: 20px;
 }
 
-#header_left li {
+header li {
   margin: 0 10px;
 }
 
@@ -152,6 +152,10 @@ input.search_input {
   cursor: pointer;
 }
 
+.contact:hover {
+  background-color: #F6F6F6;
+}
+
 .contact:active {
   background-color: #EAEAEA;
 }
@@ -176,4 +180,74 @@ input.search_input {
   width: 65%;
   height: 100%;
 }
+
+/* header destro */
+.dettagli_utente {
+  margin-left: 10px;
+}
+
+.dettagli_utente p {
+  font-size: 14px;
+  margin-top: 5px;
+  color: grey;
+}
+
+#header_right {
+  border-left: 1px solid lightgrey;
+}
+/* fine header destro */
+/* sezione messaggi */
+.messages {
+  height: calc(100% - 70px - 70px);
+  background-image: url("../img/mine.jpg");
+  overflow-y: scroll;
+  padding: 30px 50px;
+}
+
+.message {
+  margin: 5px 0;
+  padding: 12px 40px 17px 15px;
+  border-radius: 10px;
+  position: relative;
+  min-width: 40%;
+  max-width: 60%;
+}
+
+.message.sent {
+  background-color: #D5F9BA;
+  float: right;
+}
+
+.message.received {
+  background-color: white;
+  float: left;
+}
+
+.message_text {
+  font-size: 15px;
+}
+
+.message_time {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  color: grey;
+  font-size: 10px;
+  color: #999999;
+}
+
+.message i {
+  display: none;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  color: grey;
+  cursor: pointer;
+}
+
+.message:hover i {
+  display: block;
+}
+/* sezione messaggi */
+
 /* fine colonna destra */
