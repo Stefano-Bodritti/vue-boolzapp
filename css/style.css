@@ -16,6 +16,12 @@ body {
   clear: both;
 }
 
+ul.list_inline {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
 .page_wrapper {
   height: 100vh;
   background: linear-gradient(180deg, rgba(0,150,136,1) 15%, rgba(219,219,210,1) 15%);
@@ -30,6 +36,11 @@ body {
   height: 95%;
 }
 
+.avatar {
+  height: 50px;
+  border-radius: 50%;
+}
+
 /* colonna sinistra */
 .col_left {
   float: left;
@@ -37,8 +48,27 @@ body {
   height: 100%;
 }
 
+header#header_left {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #EAEAEA;
+  padding: 0 10px;
+}
 
+.utente {
+  display: flex;
+  align-items: center;
+}
 
+#header_left a {
+  color: #B1B1B1;
+  font-size: 20px;
+}
+
+#header_left li {
+  margin: 0 10px;
+}
 
 /* fine colonna sinistra */
 /* colonna destra */
