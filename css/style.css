@@ -184,6 +184,7 @@ input.search_input {
 /* header destro */
 .dettagli_utente {
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .dettagli_utente p {
@@ -249,5 +250,33 @@ input.search_input {
   display: block;
 }
 /* sezione messaggi */
+/* footer destra */
+footer {
+  height: 70px;
+  background-color: #F3EEEA;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-left: 1px solid lightgrey;
+}
 
+footer input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.container_icon {
+  padding: 0 30px;
+  color: #6B7376;
+  font-size: 22px;
+}
+
+.container_icon i {
+  cursor: pointer;
+}
+/* footer destra */
 /* fine colonna destra */
