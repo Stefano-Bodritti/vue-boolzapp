@@ -106,6 +106,32 @@ header#header_left {
 .notifications h4 a {
   color: #578194;
 }
+
+.search {
+  background-color: #eeeeee;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+  color: #B1B1B1;
+}
+
+.search_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 60px;
+  height: 30px;
+}
+
+input.search_input {
+  width: calc(100% - 60px);
+  height: 30px;
+  border: none;
+  outline: none;
+}
+
 /* fine colonna sinistra */
 /* colonna destra */
 .col_right {
