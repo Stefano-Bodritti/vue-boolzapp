@@ -41,6 +41,10 @@ ul.list_inline {
   border-radius: 50%;
 }
 
+h3 {
+  font-size: 16px;
+}
+
 /* colonna sinistra */
 .col_left {
   float: left;
@@ -70,6 +74,38 @@ header#header_left {
   margin: 0 10px;
 }
 
+.notifications {
+  height: 90px;
+  background-color: #8EDAFC;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bell_container {
+  margin: 0 10px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bell_container i {
+  color: #8EDAFC;
+  font-size: 24px;
+}
+
+.notifications h4 {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.notifications h4 a {
+  color: #578194;
+}
 /* fine colonna sinistra */
 /* colonna destra */
 .col_right {
