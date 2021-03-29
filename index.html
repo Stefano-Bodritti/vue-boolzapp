@@ -17,7 +17,7 @@
   <body>
     <div class="page_wrapper">
       <!-- contenitore -->
-      <div class="container clearfix">
+      <div id="root" class="container clearfix">
         <!-- colonna sinistra -->
         <div class="col_left">
           <!-- header sinistra -->
@@ -54,17 +54,11 @@
           <!-- fine sezione cerca -->
           <!-- sezione contatti -->
           <ul class="contacts">
-            <li class="contact">
+            <li v-for="contact in contacts" class="contact">
               <div class="avatar_container">
-                <img src="img/avatar_1.jpg" alt="Contatto 1">
+                <img v-bind:src="'img/avatar' + contact.avatar + '.jpg'" v-bind:alt="'Immagine ' + contact.name">
               </div>
-              <h3>Michele</h3>
-            </li>
-            <li class="contact">
-              <div class="avatar_container">
-                <img src="img/avatar_1.jpg" alt="Contatto 1">
-              </div>
-              <h3>Michele</h3>
+              <h3>{{contact.name}}</h3>
             </li>
           </ul>
           <!-- fine sezione contatti -->
