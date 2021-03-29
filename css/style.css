@@ -36,11 +36,6 @@ ul.list_inline {
   height: 95%;
 }
 
-.avatar {
-  height: 50px;
-  border-radius: 50%;
-}
-
 h3 {
   font-size: 16px;
 }
@@ -52,6 +47,7 @@ h3 {
   height: 100%;
 }
 
+/* header sinistra */
 header#header_left {
   height: 70px;
   display: flex;
@@ -73,6 +69,13 @@ header#header_left {
 #header_left li {
   margin: 0 10px;
 }
+
+.avatar_utente {
+  height: 50px;
+  border-radius: 50%;
+}
+/* fine header sinistra */
+/* notifiche */
 
 .notifications {
   height: 90px;
@@ -106,9 +109,11 @@ header#header_left {
 .notifications h4 a {
   color: #578194;
 }
+/* fine notifiche */
+/* sezione ricerca */
 
 .search {
-  background-color: #eeeeee;
+  background-color: #F8F8F8;
   display: flex;
   align-items: center;
   height: 50px;
@@ -131,8 +136,40 @@ input.search_input {
   border: none;
   outline: none;
 }
+/* fine sezione ricerca */
+/* sezione contatti */
+.contacts {
+  height: calc(100% - 50px - 90px - 70px);
+  background-color: white;
+  overflow-y: scroll;
+  list-style: none;
+}
 
+.contact {
+  height: 80px;
+  padding: 10px 15px;
+  display: flex;
+  cursor: pointer;
+}
+
+.contact:active {
+  background-color: #EAEAEA;
+}
+
+.avatar_container {
+  align-self: center;
+}
+
+.avatar_container img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* fine sezione contatti */
 /* fine colonna sinistra */
+
 /* colonna destra */
 .col_right {
   float: left;
