@@ -51,7 +51,7 @@
             <div class="search_icon">
               <i class="fas fa-search"></i>
             </div>
-            <input class="search_input" type="text" placeholder="Cerca o inizia una nuova Chat"></input>
+            <input class="search_input" type="text" placeholder="Cerca o inizia una nuova Chat">
           </div>
           <!-- fine sezione cerca -->
           <!-- sezione contatti -->
@@ -87,7 +87,7 @@
           <!-- fine header destra -->
           <!-- sezione messaggi -->
           <div class="messages">
-            
+
             <div v-for="(item, index) in contacts[contactsIndex].messages" class="message_container clearfix">
               <div v-bind:class="item.status" class="message">
                 <div class="message_text">{{item.message}}</div>
