@@ -6,7 +6,7 @@ var app = new Vue (
       {
         name: 'Michele',
         avatar: '_1',
-        visible: false,
+        visible: true,
         messages: [{
           date: '10/01/2020 15:30:55',
           message: 'Hai portato a spasso il cane?',
@@ -83,7 +83,17 @@ var app = new Vue (
         ],
       },
     ],
+    contactsIndex: 0,
     },
+    methods: {
+      changeContact: function(index) {
+        for (var i = 0; i < this.contacts.length; i++) {
+          this.contacts[i].visible = false;
+        }
+        this.contacts[index].visible = true;
+        this.contactsIndex = index;
+      }
+    }
 
   }
 );
