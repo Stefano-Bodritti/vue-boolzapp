@@ -84,6 +84,7 @@ var app = new Vue (
       },
     ],
     contactsIndex: 0,
+    newMessage: "",
     },
     methods: {
       changeContact: function(index) {
@@ -92,8 +93,19 @@ var app = new Vue (
         }
         this.contacts[index].visible = true;
         this.contactsIndex = index;
-      }
-    }
+      },
+      sendMessage: function() {
+        if ( this.newMessage != "" ) {
+          const newMessageObj = {
+            date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+            message: this.newMessage,
+            status: "sent"
+          };
+          this.contacts[this.contactsIndex].messages.push(newMessageObj);
+          this.newMessage = "";
+        }
+      },
 
+    }
   }
 );

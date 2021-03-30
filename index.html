@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- day js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js" integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg==" crossorigin="anonymous"></script>
     <!-- vuejs -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -85,6 +87,7 @@
           <!-- fine header destra -->
           <!-- sezione messaggi -->
           <div class="messages">
+            
             <div v-for="(item, index) in contacts[contactsIndex].messages" class="message_container clearfix">
               <div v-bind:class="item.status" class="message">
                 <div class="message_text">{{item.message}}</div>
@@ -93,21 +96,6 @@
               </div>
             </div>
 
-            <!-- <div class="message_container clearfix">
-              <div class="message sent">
-                <div class="message_text">Ricordati di dargli da mangiare</div>
-                <div class="message_time">29/03/2021 15:03</div>
-                <i class="fas fa-chevron-down"></i>
-              </div>
-            </div>
-
-            <div class="message_container clearfix">
-              <div class="message received">
-                <div class="message_text">Tutto fatto!</div>
-                <div class="message_time">29/03/2021 15:05</div>
-                <i class="fas fa-chevron-down"></i>
-              </div>
-            </div> -->
           </div>
           <!-- fine sezione messaggi -->
           <!-- footer destra -->
@@ -115,7 +103,7 @@
             <div class="container_icon">
               <i class="far fa-smile"></i>
             </div>
-            <input type="text" placeholder="Scrivi un messaggio">
+            <input v-model="newMessage" @keydown.enter="sendMessage" type="text" placeholder="Scrivi un messaggio">
             <div class="container_icon">
               <i class="fas fa-microphone"></i>
             </div>
