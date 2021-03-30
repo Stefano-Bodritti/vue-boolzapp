@@ -6,7 +6,7 @@ var app = new Vue (
       {
         name: 'Michele',
         avatar: '_1',
-        visible: true,
+        visible: false,
         messages: [{
           date: '10/01/2020 15:30:55',
           message: 'Hai portato a spasso il cane?',
@@ -27,7 +27,7 @@ var app = new Vue (
       {
         name: 'Fabio',
         avatar: '_2',
-        visible: true,
+        visible: false,
         messages: [{
           date: '20/03/2020 16:30:00',
           message: 'Ciao come stai?',
@@ -41,14 +41,14 @@ var app = new Vue (
         {
           date: '20/03/2020 16:35:00',
           message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-          status: 'received'
+          status: 'sent'
         }
         ],
       },
       {
         name: 'Samuele',
         avatar: '_3',
-        visible: true,
+        visible: false,
         messages: [{
           date: '28/03/2020 10:10:40',
           message: 'La Marianna va in campagna',
@@ -69,7 +69,7 @@ var app = new Vue (
       {
         name: 'Luisa',
         avatar: '_4',
-        visible: true,
+        visible: false,
         messages: [{
           date: '10/01/2020 15:30:55',
           message: 'Lo sai che ha aperto una nuova pizzeria?',
@@ -82,7 +82,7 @@ var app = new Vue (
         }
         ],
       },
-    ]
+    ],
     },
 
   }

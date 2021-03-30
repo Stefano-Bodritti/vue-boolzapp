@@ -54,7 +54,7 @@
           <!-- fine sezione cerca -->
           <!-- sezione contatti -->
           <ul class="contacts">
-            <li v-for="contact in contacts" class="contact">
+            <li v-for="(contact, index) in contacts" class="contact">
               <div class="avatar_container">
                 <img v-bind:src="'img/avatar' + contact.avatar + '.jpg'" v-bind:alt="'Immagine ' + contact.name">
               </div>
@@ -85,15 +85,15 @@
           <!-- fine header destra -->
           <!-- sezione messaggi -->
           <div class="messages">
-            <div class="message_container clearfix">
-              <div class="message sent">
-                <div class="message_text">Hai portato a spasso il cane?</div>
-                <div class="message_time">29/03/2021 15:00</div>
+            <div v-for="(item, index) in contacts[0].messages" class="message_container clearfix">
+              <div v-bind:class="item.status" class="message">
+                <div class="message_text">{{item.message}}</div>
+                <div class="message_time">{{item.date}}</div>
                 <i class="fas fa-chevron-down"></i>
               </div>
             </div>
 
-            <div class="message_container clearfix">
+            <!-- <div class="message_container clearfix">
               <div class="message sent">
                 <div class="message_text">Ricordati di dargli da mangiare</div>
                 <div class="message_time">29/03/2021 15:03</div>
@@ -107,7 +107,7 @@
                 <div class="message_time">29/03/2021 15:05</div>
                 <i class="fas fa-chevron-down"></i>
               </div>
-            </div>
+            </div> -->
           </div>
           <!-- fine sezione messaggi -->
           <!-- footer destra -->

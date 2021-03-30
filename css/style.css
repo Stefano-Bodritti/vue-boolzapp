@@ -160,6 +160,10 @@ input.search_input {
   background-color: #EAEAEA;
 }
 
+.contact.active {
+  background-color: #EAEAEA;
+}
+
 .avatar_container {
   align-self: center;
 }
