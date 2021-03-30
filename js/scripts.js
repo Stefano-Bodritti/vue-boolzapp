@@ -103,8 +103,17 @@ var app = new Vue (
           };
           this.contacts[this.contactsIndex].messages.push(newMessageObj);
           this.newMessage = "";
+          setTimeout(this.reply, 1000);
         }
       },
+      reply: function() {
+        const answer = {
+          date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+          message: "ok",
+          status: "received"
+        };
+        this.contacts[this.contactsIndex].messages.push(answer);
+      }
 
     }
   }
