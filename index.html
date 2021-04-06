@@ -75,7 +75,7 @@
               <img class="avatar_utente" src="img/avatar_1.jpg" v-bind:src="'img/avatar' + contacts[contactsIndex].avatar + '.jpg'" v-bind:alt="'Contatto ' + contacts[contactsIndex].name">
               <div class="dettagli_utente">
                 <h3>{{contacts[contactsIndex].name}}</h3>
-                <p>Ultimo accesso oggi alle</p>
+                <p>Ultimo accesso oggi alle {{lastAccess}}</p>
               </div>
             </div>
             <ul class="list_inline">

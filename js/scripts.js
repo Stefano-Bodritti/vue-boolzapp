@@ -90,6 +90,7 @@ var app = new Vue (
     contactsIndex: 0,
     newMessage: "",
     search: "",
+    lastAccess: dayjs().format('HH:mm'),
     },
     methods: {
       changeContact: function(index) {
@@ -123,7 +124,7 @@ var app = new Vue (
       },
       filterContacts: function() {
         this.contacts.forEach((item) => {
-          if ( item.name.includes(this.search) ) {
+          if ( item.name.toLowerCase().includes(this.search.toLowerCase()) ) {
             item.visible = true;
           } else {
             item.visible = false;
@@ -131,7 +132,7 @@ var app = new Vue (
         });
         // versione con ciclo for
         // for (let i = 0; i < this.contacts.length; i++) {
-        //   if ( this.contacts[i].name.includes(this.search) ) {
+        //   if ( this.contacts[i].name.toLowerCase().includes(this.search.toLowerCase()) ) {
         //     this.contacts[i].visible = true;
         //   } else {
         //     this.contacts[i].visible = false;
