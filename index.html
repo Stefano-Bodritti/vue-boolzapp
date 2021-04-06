@@ -51,12 +51,12 @@
             <label for="search_user" class="search_icon">
               <i class="fas fa-search"></i>
             </label>
-            <input id="search_user" v-model="search" class="search_input" type="text" placeholder="Cerca o inizia una nuova Chat">
+            <input id="search_user" v-model="search" class="search_input" type="text" placeholder="Cerca o inizia una nuova Chat" @keyup="filterContacts">
           </div>
           <!-- fine sezione cerca -->
           <!-- sezione contatti -->
           <ul class="contacts">
-            <li v-for="(contact, index) in contacts" @click="changeContact(index)" class="contact" v-bind:class="contacts[index].visible ? 'active' : ''">
+            <li v-for="(contact, index) in contacts" @click="changeContact(index)" class="contact" v-bind:class="contacts[index].selected ? 'active' : ''">
               <div class="avatar_container">
                 <img v-bind:src="'img/avatar' + contact.avatar + '.jpg'" v-bind:alt="'Immagine ' + contact.name">
               </div>

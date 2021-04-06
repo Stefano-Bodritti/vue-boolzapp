@@ -7,6 +7,7 @@ var app = new Vue (
         name: 'Michele',
         avatar: '_1',
         visible: true,
+        selected: true,
         messages: [{
           date: '10/01/2020 15:30:55',
           message: 'Hai portato a spasso il cane?',
@@ -27,7 +28,8 @@ var app = new Vue (
       {
         name: 'Fabio',
         avatar: '_2',
-        visible: false,
+        visible: true,
+        selected: false,
         messages: [{
           date: '20/03/2020 16:30:00',
           message: 'Ciao come stai?',
@@ -48,7 +50,8 @@ var app = new Vue (
       {
         name: 'Samuele',
         avatar: '_3',
-        visible: false,
+        visible: true,
+        selected: false,
         messages: [{
           date: '28/03/2020 10:10:40',
           message: 'La Marianna va in campagna',
@@ -69,7 +72,8 @@ var app = new Vue (
       {
         name: 'Luisa',
         avatar: '_4',
-        visible: false,
+        visible: true,
+        selected: false,
         messages: [{
           date: '10/01/2020 15:30:55',
           message: 'Lo sai che ha aperto una nuova pizzeria?',
@@ -90,9 +94,9 @@ var app = new Vue (
     methods: {
       changeContact: function(index) {
         for (var i = 0; i < this.contacts.length; i++) {
-          this.contacts[i].visible = false;
+          this.contacts[i].selected = false;
         }
-        this.contacts[index].visible = true;
+        this.contacts[index].selected = true;
         this.contactsIndex = index;
       },
       sendMessage: function() {
@@ -117,6 +121,15 @@ var app = new Vue (
           }, 1000);
         }
       },
+      filterContacts: function() {
+        for (let i = 0; i < this.contacts.length; i++) {
+          if ( this.contacts[i].name.includes(this.search) ) {
+            this.contacts[i].visible = true;
+          } else {
+            this.contacts[i].visible = false;
+          }
+        }
+      }
 
     }
   }
