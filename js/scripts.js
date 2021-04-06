@@ -122,13 +122,21 @@ var app = new Vue (
         }
       },
       filterContacts: function() {
-        for (let i = 0; i < this.contacts.length; i++) {
-          if ( this.contacts[i].name.includes(this.search) ) {
-            this.contacts[i].visible = true;
+        this.contacts.forEach((item) => {
+          if ( item.name.includes(this.search) ) {
+            item.visible = true;
           } else {
-            this.contacts[i].visible = false;
+            item.visible = false;
           }
-        }
+        });
+        // versione con ciclo for
+        // for (let i = 0; i < this.contacts.length; i++) {
+        //   if ( this.contacts[i].name.includes(this.search) ) {
+        //     this.contacts[i].visible = true;
+        //   } else {
+        //     this.contacts[i].visible = false;
+        //   }
+        // }
       }
 
     }
