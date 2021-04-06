@@ -85,6 +85,7 @@ var app = new Vue (
     ],
     contactsIndex: 0,
     newMessage: "",
+    search: "",
     },
     methods: {
       changeContact: function(index) {
@@ -103,17 +104,19 @@ var app = new Vue (
           };
           this.contacts[this.contactsIndex].messages.push(newMessageObj);
           this.newMessage = "";
-          setTimeout(this.reply, 1000);
+          //devo salvare queste due variabili perchè il this altrimenti non funziona. in alternativa, scrivere funzione a parte e richiamarla
+          const contattoAttivo = this.contacts;
+          const indice = this.contactsIndex;
+          setTimeout(function() {
+            const answer = {
+              date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+              message: "ok",
+              status: "received"
+            };
+            contattoAttivo[indice].messages.push(answer);
+          }, 1000);
         }
       },
-      reply: function() {
-        const answer = {
-          date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-          message: "ok",
-          status: "received"
-        };
-        this.contacts[this.contactsIndex].messages.push(answer);
-      }
 
     }
   }

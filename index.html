@@ -48,10 +48,10 @@
           <!-- fine notifiche -->
           <!-- sezione cerca -->
           <div class="search">
-            <div class="search_icon">
+            <label for="search_user" class="search_icon">
               <i class="fas fa-search"></i>
-            </div>
-            <input class="search_input" type="text" placeholder="Cerca o inizia una nuova Chat">
+            </label>
+            <input id="search_user" v-model="search" class="search_input" type="text" placeholder="Cerca o inizia una nuova Chat">
           </div>
           <!-- fine sezione cerca -->
           <!-- sezione contatti -->
